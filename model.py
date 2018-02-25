@@ -2,6 +2,19 @@ import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 
+"""""
+Author: Vahid Saberi
+Date: Feb 25, 2018
+
+Description:
+
+The code regenerates the simulations of the following paper:
+
+Mishra, Sharmistha, David N. Fisman, and Marie-Claude Boily.
+"The ABC of terms used in mathematical models of infectious diseases."
+Journal of Epidemiology & Community Health (2010): jech-2009.
+""""
+
 
 
 def model_A(X,t):
@@ -11,8 +24,6 @@ def model_A(X,t):
     #parameters
     R0=21
     r_R=1/70
-
-
 
     N=S+I
 
@@ -32,8 +43,6 @@ def model_B(X,t):
     R0=3
     r_R=0
     r_L=0.1
-
-
 
     X_dot=[]
     N=S+I
@@ -55,8 +64,6 @@ def model_C(X,t):
     R0=3
     r_R=0
     r_l=0.1
-
-
 
     X_dot=[]
     N=S+I+R
@@ -82,8 +89,6 @@ def model_D(X,t):
     r_l=0.1
     r_L=0.006
 
-
-
     X_dot=[]
     N=S+I+R
     lambda_=R0*(r_R+r_l)*I/N
@@ -98,14 +103,7 @@ def model_D(X,t):
 
 
 
-
-
-
-
-
-
-
-
+#Solve the models
 
 def solve_model_A():
 
